@@ -75,12 +75,9 @@ web applications and static sites.
 
 10. Run the project on your local host.
 
-       grunt serve
+        grunt serve
 
-11. Open a browser and view the site at the URL below.
-
-       localhost:8080
-
+11. Open a browser and view the site at `localhost:8080`.
 
 ## Setting up a Git-based workflow for PSK releases
 
