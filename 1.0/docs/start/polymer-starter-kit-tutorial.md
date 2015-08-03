@@ -84,7 +84,7 @@ web applications and static sites.
 Follow the instructions below to set up a Git-based workflow for updating
 your project whenever a new release of PSK comes out. 
 
-#. Create a remote that tracks the Polymer Starter Kit repository. This is
+1. Create a remote that tracks the Polymer Starter Kit repository. This is
    where you pull the PSK source code. 
 
    The workflow below is a little more work than downloading the repository
@@ -99,28 +99,28 @@ your project whenever a new release of PSK comes out.
 
        git remote add psk https://github.com/PolymerElements/polymer-starter-kit.git
 
-#. Fetch the PSK source code.
+2. Fetch the PSK source code.
 
       git fetch psk
 
-#. After fetching, you should have seen a list of branches and tags. Find and 
+3. After fetching, you should have seen a list of branches and tags. Find and 
    checkout the latest tag.
 
        git checkout tags/v1.0.3
 
-#. Create a branch so that we can commit these changes to master.
+4. Create a branch so that we can commit these changes to master.
 
       git checkout -b psk-v1.0.3
 
-#. Go back to master, and merge the PSK release into master.
+5. Go back to master, and merge the PSK release into master.
 
       git checkout master
 
-[//]: # (this adds all commits from PSK to your repository...)
+   [//]: # (this adds all commits from PSK to your repository...)
 
       git merge psk-v1.0.3
 
-#. OK. You're Git repository is now set up to pull in new PSK releases.
+5. OK. You're Git repository is now set up to pull in new PSK releases.
 
 
 
