@@ -79,6 +79,60 @@ web applications and static sites.
 
 11. Open a browser and view the site at `localhost:8080`.
 
+## Creating a new page
+
+In this section, you add a new page to the application. The new page 
+will retrieve and display the latest Stack Overflow questions 
+containing the tag `polymer-starter-kit`.
+
+1. Open `app/index.html`.
+
+1. Find the navigation menu. Add a link to your new page.
+
+```html
+<a data-route="stack-overflow-feed" href="/stack-overflow-feed">
+  <iron-icon icon="help"></iron-icon>
+  <span>Stack Overflow Feed</span>
+</a>
+```
+
+1. Find the part of `index.html` containing all of the main content for 
+   the site. Add your new content below the last `<section>`.
+
+   [//]: # (do something PSK, but not issues)
+
+```html
+<section data-route="stack-overflow-feed">
+  <paper-material elevation="1">
+    <h2 class="paper-font-display2">Stack Overflow Feed</h2>
+    <a href="/users/Rob">Rob</a>
+  </paper-material>
+</section>
+```
+
+1. Save and close `index.html`.
+
+1. Configure your route in `app/elements/routing.html`.
+
+```javascript
+page('/stack-overflow-feed', function () {
+  app.route = 'stack-overflow-feed';
+});
+```
+
+1. Save and close `routing.html`.
+
+### Using elements
+
+1. The `iron-ajax` element is already bundled as a dependency. If it
+   was not, you could install it as a Bower dependency with the 
+   command below.
+
+       bower install -S PolymerElements/iron-ajax
+
+1. Open `app/elements/elements.html` and add a line to import 
+   `iron-ajax`.
+
 ## Setting up a Git-based workflow for PSK releases
 
 Follow the instructions below to set up a Git-based workflow for updating
