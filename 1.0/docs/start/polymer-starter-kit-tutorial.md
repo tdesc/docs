@@ -81,18 +81,51 @@ web applications and static sites.
 
 ## Creating a new page
 
-In this section, you add a new page to the application. The new page 
-will retrieve and display the latest Stack Overflow questions 
-containing the tag `polymer-starter-kit`.
+In this section, you add a new page to the application.
+
+[//]: # (description of new page)
+
+
+[//]: # (use seed-element)
+
+1. Create a new file at `app/elements/my-books-feed/my-books-feed.html`
+   (you'll need to create the `my-books-feed` directory) and add the 
+   code below to it.
+
+```html
+
+
+<dom-module id="my-books-feed">
+  <script>
+    (function() {
+      Polymer({
+        is: 'my-books-feed',
+        properties: {}
+      });
+    })();
+</dom-module>
+```
+
+
+
+1. Save and close `my-books-feed.html`.
+
+
+1. Open `app/elements/elements.html` and import the new element.
+
+```html
+<link rel="import" href="my-book-feed/my-book-feed.html">
+```
+
 
 1. Open `app/index.html`.
 
 1. Find the navigation menu. Add a link to your new page.
 
 ```html
-<a data-route="stack-overflow-feed" href="/stack-overflow-feed">
-  <iron-icon icon="help"></iron-icon>
-  <span>Stack Overflow Feed</span>
+<a data-route="my-books-feed" href="/my-books-feed">
+  <iron-icon icon="book"></iron-icon>
+  <span>Books</span>
 </a>
 ```
 
@@ -102,25 +135,26 @@ containing the tag `polymer-starter-kit`.
    [//]: # (do something PSK, but not issues)
 
 ```html
-<section data-route="stack-overflow-feed">
-  <paper-material elevation="1">
-    <h2 class="paper-font-display2">Stack Overflow Feed</h2>
-    <a href="/users/Rob">Rob</a>
-  </paper-material>
+<section data-route="my-books-feed">
+  <my-books-feed></my-books-feed>
 </section>
 ```
 
 1. Save and close `index.html`.
 
-1. Configure your route in `app/elements/routing.html`.
+1. Open `app/elements/routing.html`.
+
+1. Add the code below to configure the route to the new page.
 
 ```javascript
-page('/stack-overflow-feed', function () {
-  app.route = 'stack-overflow-feed';
+page('/my-books-feed', function () {
+  app.route = 'my-books-feed';
 });
 ```
 
 1. Save and close `routing.html`.
+
+1. Build and preview the site.
 
 ### Using elements
 
