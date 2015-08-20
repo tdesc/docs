@@ -368,8 +368,8 @@ Example:
         'userManagerChanged(user.manager)'
       ],
 
-      userManagerChanged: function(user) {
-        console.log('new manager name is ' + user.name);
+      userManagerChanged: function(manager) {
+        console.log('new manager name is ' + manager);
       }
 
     });
